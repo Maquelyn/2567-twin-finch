@@ -26,6 +26,155 @@
 	5.3 - Alignments
 --------------------------------------------------------------*/
 
+html {
+	font-size: 16px;
+}
+
+*, *:after, *:before {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/** 1.0 - Typography **/
+
+* {
+	color: #2f2f30;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+blockquote p:first-child, h2, h3 {
+	font-family: 'IM Fell English', serif;
+}
+
+/** 1.1 - Headings **/
+
+blockquote p:first-child {
+	font-size: 3.3rem;
+}
+
+blockquote p:last-child {
+	font-size: 1.18rem;
+}
+
+h2 {
+	font-size: 3.1rem;
+}
+
+h3, h4 {
+	font-size: 1.6rem;
+}
+
+/** 1.2 - Body Copy **/
+
+/** 1.3 - Buttons **/
+
+a {
+	font-size: 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+ul li, .btn {
+	display: inline-block;
+}
+
+/** 2.0 - Navigation Menus **/
+
+/** 2.1 - Main **/
+
+h1 {
+	margin-bottom: -100px;
+}
+
+nav li {
+	padding: 0 20px;
+}
+
+/** 3.0 - Content **/
+
+/** 3.1 - Site Structure **/
+
+[class*='col-'] {
+	margin: 0 auto;
+	padding-right: 20px;
+}
+
+[class*='col-']:last-child {
+	padding-right: 0;
+}
+
+/**.flex {
+	-moz-display: flex;
+	-o-display: flex;
+	-ms-display: flex;
+	-webkit-display: flex;
+	display: flex;
+	overflow: hidden;
+}
+
+.flex[class*='col-'] {
+	flex: 1;
+}
+
+.bg-lgt-blue {
+	background-color: #e2e2e2;
+	padding: 20px;
+	height: 100%;
+}**/
+
+/** IMAGE PLACEHOLDERS **/
+
+.gray {
+	background-color: #e2e2e2;
+	width: 100%;
+}
+
+#products .gray, #map .gray {
+	height: 100px;
+}
+
+.d-gray, #hero {
+	background-color: #c9c9c9;
+	width: 100%;
+}
+
+.d-gray {
+	height: 100px;
+}
+
+/** 5.0 - UTILITIES **/
+
+/** 5.1 - Text Alignments **/
+
+h3, h4, #products p, #shipping p {
+	text-align: left;
+}
+
+/** 5.3 - Alignments **/
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
 /** COLUMN WIDTHS **/
 
 
