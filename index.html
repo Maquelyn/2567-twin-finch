@@ -12,7 +12,7 @@
 			var mapCanvas = document.getElementById('map');
 			var mapOptions = {
 			  center: new google.maps.LatLng(45.5135, -122.6801),
-			  zoom: 8,
+			  zoom: 12,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 			}
 			var map = new google.maps.Map(mapCanvas, mapOptions)
@@ -26,27 +26,26 @@
 <body>
 <header id="hero">
 	<div id="navbar-default">
-			<nav class="wrapper">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#products">Products</a></li>
-					<li><h1><a href="#"><img src="img/logo-white.png" alt="Twin Finch Roastery Logo"></a></h1></li>
-					<li><a href="#process">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="#hero">Home</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><h1><a href="#hero"><img src="img/logo-white.png" alt="Twin Finch Roastery Logo"></a></h1></li>
+				<li><a href="#process">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
 	</div>
-	<div class="wrapper">
+	<div class="wrapper" id="startchange">
 		<blockquote>
 			<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>
 			<p><a href="http://www.coffeereview.com/" target="_blank">- Coffee Review</a></p>
 		</blockquote>
-		<p class="btn"><a href="#products">Our Products</a></p>
-		<p class="btn"><a href="#contact">Contact Us</a></p>
+		<p class="btn"><a href="#products">Our Products</a><a href="#contact">Contact Us</a></p>
 	</div>
 </header>
 
-<section id="startchange" class="gray">
+<section class="gray">
 	<div class="wrapper">
 		<div class="block-center col-1-2">
 			<header>
@@ -61,10 +60,10 @@
 	<header>
 		<h2>Our Products</h2>
 	</header>
-	<div class="row">
+	<div class="row flex">
 		<div class="col-1-2 f-left">
 			<div id="evening" class="gray"><img src="img/blend-house.jpg" alt="House Blend Packaging" height="300"></div>
-			<div class="flex bg-lgt-blue">
+			<div class="flex-h bg-lgt-blue">
 				<header>
 					<h3>Evening Oak</h3>
 				</header>
@@ -74,12 +73,12 @@
 					<li>1lb $19.95</li>
 				</ul>
 				<p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
-				<p class="btn"><a href="#">Buy</a></p>
+				<p class="btn"><a href="#hero">Buy</a></p>
 			</div>
 		</div>
 		<div class="col-1-2 f-right">
 			<div id="house" class="gray"><img src="img/blend-house.jpg" alt="House Blend Packaging" height="300"></div>
-			<div class="flex bg-lgt-blue">
+			<div class="flex-h bg-lgt-blue">
 				<header>
 					<h3>Finch House Blend</h3>
 				</header>
@@ -90,14 +89,14 @@
 				</ul>
 				<p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
 				<p>Our house blend was rated a 98 by coffeereview.com!</p>
-				<p class="btn"><a href="#">Buy</a></p>
+				<p class="btn"><a href="#hero">Buy</a></p>
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row flex">
 		<div class="col-1-3 f-left">
 			<div id="sunrise" class="gray"><img src="img/blend-house.jpg" alt="House Blend Packaging" height="200"></div>
-			<div class="flex bg-lgt-blue">
+			<div class="flex-h bg-lgt-blue">
 				<header>
 					<h3>Sunrise</h3>
 				</header>
@@ -107,12 +106,12 @@
 					<li>1lb $17.95</li>
 				</ul>
 				<p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-				<p class="btn"><a href="#">Buy</a></p>
+				<p class="btn"><a href="#hero">Buy</a></p>
 			</div>
 		</div>
 		<div class="col-1-3 f-left">
 			<div id="midnight" class="gray"><img src="img/blend-house.jpg" alt="House Blend Packaging" height="200"></div>
-			<div class="flex bg-lgt-blue">
+			<div class="flex-h bg-lgt-blue">
 				<header>
 					<h3>Midnight</h3>
 				</header>
@@ -122,12 +121,12 @@
 					<li>1lb $17.95</li>
 				</ul>
 				<p>Roasted into second crack for a big, bold and dark cup. Beans display oil.</p>
-				<p class="btn"><a href="#">Buy</a></p>
+				<p class="btn"><a href="#hero">Buy</a></p>
 			</div>
 		</div>
 		<div class="col-1-3 f-right">
 			<div id="espresso" class="gray"><img src="img/blend-house.jpg" alt="House Blend Packaging" height="200"></div>
-			<div class="flex bg-lgt-blue">
+			<div class="flex-h bg-lgt-blue">
 				<header>
 					<h3>Espresso</h3>
 				</header>
@@ -136,7 +135,7 @@
 					<li>1lb $19.95</li>
 				</ul>
 				<p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
-				<p class="btn"><a href="#">Buy</a></p>
+				<p class="btn"><a href="#hero">Buy</a></p>
 			</div>
 		</div>
 	</div>
@@ -156,21 +155,16 @@
 
 <div id="subscribe" class="d-gray"><!--FORM-->
 	<div class="wrapper">
-		<div class="col-5-6">
-			<div class="col-1-2 f-left">
-				<header>
-					<h4>Subscribe to our newsletter</h4>
-				</header>
-			</div>
-			<div class="col-1-2 f-right">
-				<form>
-					<label> 
-						<input type="email" name="email">
-					</label>
-					<p><a href="#">Subscribe</a></p>
-				</form>
-			</div>
-		</div>
+		<div class="row col-10-12 block-center">
+			<header>
+				<h4>Subscribe to our newsletter</h4>
+			</header>
+			<form class="row">
+				<label for="email">Email: </label>
+				<input type="email" name="email" id="email">
+				<p><a href="#hero">Subscribe</a></p>
+			</form>
+		</div>	
 	</div>
 </div>
 
@@ -212,7 +206,7 @@
 			<div class="col-1-2 f-right">
 				<p>Leave a Message:</p>
 				<textarea></textarea>
-				<p><a href="#">Submit</a></p>
+				<p><a href="#hero">Submit</a></p>
 			</div>
 		</form>
 	</div>
@@ -221,18 +215,16 @@
 <footer>
 	<div class="wrapper row">
 		<div class="col-2-12 f-left">
-			<h5><a href="#"><img src="img/logo-white.png" alt="Twin Finch Roastery Logo" height="50"></a></h5>
+			<img src="img/logo-white.png" alt="Twin Finch Roastery Logo" height="50">
 		</div>
-		<div class="col-1-3 f-left">
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#products">Products</a></li>
-					<li><a href="#process">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
+		<nav class="col-1-3 f-left">
+			<ul>
+				<li><a href="#hero">Home</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#process">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
 		<div class="col-1-4 f-right">
 			<ul id="social-media">
 				<li><a href="http://facebook.com" target="_blank"></a></li>

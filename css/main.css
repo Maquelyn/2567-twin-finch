@@ -69,7 +69,7 @@ blockquote p, #hero a {
 
 blockquote p:first-child {
 	font-size: 3.3rem;
-	margin-bottom: 0;
+	margin-bottom: 20px;
 }
 
 blockquote p:last-child {
@@ -111,17 +111,17 @@ a {
 	text-transform: uppercase;
 }
 
-ul li, .btn {
+ul li {
 	display: inline-block;
 }
 
-#hero p>a {
+#hero .btn a {
 	border: 2px solid #fff;
 	margin: 20px;
 	padding: 8px 20px;
 }
 
-#hero p:last-child>a {
+#hero .btn a:last-child {
 	padding: 8px 30px;
 }
 
@@ -130,7 +130,21 @@ ul li, .btn {
 	text-decoration: underline;
 }
 
+
 /** 1.4 - Forms **/
+
+#subscribe label {
+	display: none;
+}
+
+#subscribe h4, #subscribe input, #subscribe p {
+	display: inline-block;
+	float: left;
+}
+
+#subscribe h4 {
+	padding-right: 20px;
+}
 
 input, textarea {
 	display: block;
@@ -141,21 +155,54 @@ form {
 	text-align: left;
 }
 
-/** 1.5 - Lists **/
-
-.product-specs {
-	padding-left: 0;
+#subscribe input {
+	width: 45%;
 }
 
+/** 1.5 - Lists **/
+
+
+
 .product-specs {
+	margin-top: 0;
+	padding-left: 0;
 	text-align: left;
+}
+
+.product-specs li {
+	font-size: .9rem;
 }
 
 .product-specs li:nth-child(2) {
 	border-left: 1px solid #000;
 	border-right: 1px solid #000;
-	padding: 0 10px;
-	margin: 0 10px;
+
+}
+
+#evening+div .product-specs li:nth-child(2) {
+	padding: 0 40px;
+	margin: 0 40px;
+}
+
+#house+div .product-specs li:nth-child(2) {
+	padding: 0 25px;
+	margin: 0 25px;
+}
+
+#sunrise+div .product-specs li:nth-child(2) {
+	padding: 0 19px;
+	margin: 0 19px;
+}
+
+#midnight+div .product-specs li:nth-child(2) {
+	padding: 0 28px;
+	margin: 0 28px;
+}
+
+#espresso+div .product-specs li:last-child {
+	border-right: none;
+	padding-left: 17px;
+	margin-left: 17px;
 }
 
 
@@ -167,17 +214,7 @@ h1 {
 	margin: 0;
 }
 
-#navbar-default {
-    background-color:transparent;
-}
 
-#navbar-default  {
-	position: fixed;
-	top: 0;
-	left: 0;
-	margin-top: -20px;
-	width: 100%;
-}
 
 header ul {
 	padding: 20px 0 5px;
@@ -220,29 +257,24 @@ section {
 	padding: 15px 0 60px;
 }
 
-/**.flex {
-	-moz-display: flex;
-	-o-display: flex;
-	-ms-display: flex;
-	-webkit-display: flex;
-	display: flex;
-	overflow: hidden;
-}
-
-.flex[class*='col-'] {
-	flex: 1;
-}
-
 .bg-lgt-blue {
 	background-color: #e2e2e2;
 	padding: 20px;
 	height: 100%;
-}**/
+}
+
+
 
 /** 3.2 - Site Header **/
 
 #hero {
 	padding: 150px 0 100px;
+}
+
+/** 3.3 - Site Footer **/
+
+footer img {
+	margin: 20px 0;
 }
 
 /** IMAGE PLACEHOLDERS **/
@@ -269,9 +301,9 @@ section {
 	width: 100%;
 }
 
-.d-gray {
+/**.d-gray {
 	height: 100px;
-}
+}**/
 
 /** 5.0 - UTILITIES **/
 
@@ -410,6 +442,40 @@ h3, h4, #products p, #shipping p {
 	width: 83.3%;
 }
 
+@media screen and (min-width: 1024px) {
+	
+	/** 2.1 - Main Nav **/
+	#navbar-default {
+		background-color:transparent;
+	}
+
+	#navbar-default  {
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin-top: -20px;
+		width: 100%;
+		z-index: 9999;
+	}
+	
+	/** 3.1 - Site Structure **/
+	.flex {
+		-moz-display: flex;
+		-o-display: flex;
+		-ms-display: flex;
+		-webkit-display: flex;
+		display: flex;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+	.flex[class*='col-'] {
+		flex: 1;
+	}
+
+
+}
+
 @media screen and (max-width: 768px) {
 	
 	.wrapper {
@@ -419,5 +485,68 @@ h3, h4, #products p, #shipping p {
 	
 	[class*='col-'] {
 		width: 100%;
+		margin-right: 0;
 	}
+	
+	/** 1.1 - Headings **/
+	
+	blockquote p:first-child {
+		font-size: 2rem;
+	}
+	
+	h2 {
+		font-size: 2.2rem;
+	}
+	
+	h3 {
+		font-size: 1.7rem;
+	}
+	
+	h4 {
+		font-size: 1.4rem;
+	}
+	
+	/** 1.2 - Body **/
+	
+	p {
+		font-size: 1rem;
+	}
+	
+	/** 1.3 - Buttons **/
+	
+	#hero .btn a {
+		margin: 10px;
+		padding: 5px 10px;
+	}
+	
+	#hero .btn a:last-child {
+		margin: 10px;
+		padding: 5px 20px;
+	}
+	
+	header ul {
+		padding: 75px 0 50px;
+	}
+	
+	header nav li:nth-child(3) {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 33%;
+	}
+	
+	nav li {
+		padding: 0 5px;
+	}
+	
+	
+	
+	/** 3.1 Site Structure **/
+	
+	#hero{
+		padding-top: 5px;
+	}
+	
+	
 }
+
