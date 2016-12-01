@@ -63,7 +63,7 @@ blockquote p:first-child, h2, h3 {
 
 /** 1.1 - Headings **/
 
-blockquote p, #hero a {
+blockquote p, #navbar-default a {
 	color: #fff;
 }
 
@@ -113,6 +113,10 @@ a {
 
 ul li {
 	display: inline-block;
+}
+
+#hero a {
+	color: #fff;
 }
 
 #hero .btn a {
@@ -211,9 +215,17 @@ form {
 /** 2.1 - Main **/
 
 h1 {
-	margin: 0;
+	display: none;
 }
 
+#navbar-default li:nth-child(3) a {
+	height: 69px;
+	width: 100px;
+	background: url(../img/logo-h.png) no-repeat;
+	padding: 12px 20px;
+	display: inline-block;
+	background-position: 0 0;
+}
 
 
 header ul {
@@ -257,30 +269,15 @@ section {
 	padding: 15px 0 60px;
 }
 
-.bg-lgt-blue {
-	background-color: #e2e2e2;
-	padding: 20px;
-	height: 100%;
-}
 
 
-
-/** 3.2 - Site Header **/
-
-#hero {
-	padding: 150px 0 100px;
-}
-
-/** 3.3 - Site Footer **/
-
-footer img {
-	margin: 20px 0;
-}
 
 /** IMAGE PLACEHOLDERS **/
 
-.gray {
-	background-color: #e2e2e2;
+.bg-lgt-blue {
+	padding: 20px;
+	height: 100%;
+	background-color: #e8f5f4;
 	width: 100%;
 }
 
@@ -296,10 +293,64 @@ footer img {
 	height: 400px;
 }
 
-.d-gray, #hero, footer {
-	background-color: #c9c9c9;
+#subscribe, #hero, footer {
+	background-color: #9dd8d7;
 	width: 100%;
 }
+
+
+
+/** 3.2 - Site Header **/
+
+#hero {
+	background-image: url(../img/hero.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 150px 0 100px;
+}
+
+/** 3.3 - Site Footer **/
+
+footer img {
+	margin: 20px 0;
+}
+
+/** 4.0 - Media **/
+
+#social-media a {
+	height: 30.5px;
+	width: 30px;
+	padding: 12px 20px;
+	display: inline-block;
+	background-position: 0 0;
+}
+
+#social-media li {
+	display: inline-block;
+}
+
+#social-media li:first-child a { 
+	background: url(../img/icon-fb.png) no-repeat;
+}
+
+#social-media li:nth-child(2) a { 
+	background: url(../img/icon-tw.png) no-repeat;
+}
+
+#social-media li:last-child a { 
+	background: url(../img/icon-gplus.png) no-repeat;
+}
+
+#social-media li a:hover {
+	background-position: 0 -30.5px;
+}
+
+
+
+/**footer {
+	background-color: #59c4be;
+} **/
 
 /**.d-gray {
 	height: 100px;
@@ -447,6 +498,7 @@ h3, h4, #products p, #shipping p {
 	/** 2.1 - Main Nav **/
 	#navbar-default {
 		background-color:transparent;
+		color: #FFF;
 	}
 
 	#navbar-default  {

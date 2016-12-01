@@ -30,7 +30,7 @@
 			<ul>
 				<li><a href="#hero">Home</a></li>
 				<li><a href="#products">Products</a></li>
-				<li><h1><a href="#hero"><img src="img/logo-white.png" alt="Twin Finch Roastery Logo"></a></h1></li>
+				<li><a href="#hero"><h1>Twin Finch Roastery</h1></a></li>
 				<li><a href="#process">About</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -45,7 +45,7 @@
 	</div>
 </header>
 
-<section class="gray">
+<section class="bg-lgt-blue">
 	<div class="wrapper">
 		<div class="block-center col-1-2">
 			<header>
@@ -141,7 +141,7 @@
 	</div>
 </section>
 
-<section id="process" class="gray">
+<section id="process" class="bg-lgt-blue">
 	<div class="wrapper">
 		<div class="block-center col-1-2">
 			<header>
@@ -153,7 +153,7 @@
 	</div>
 </section>
 
-<div id="subscribe" class="d-gray"><!--FORM-->
+<div id="subscribe"><!--FORM-->
 	<div class="wrapper">
 		<div class="row col-10-12 block-center">
 			<header>
@@ -183,7 +183,7 @@
 	</div>
 </section>
 
-<section id="contact" class="gray">
+<section id="contact" class="bg-lgt-blue">
 	<div class="wrapper">
 		<div class="block-center col-1-2">
 			<header>
@@ -247,8 +247,13 @@ $(document).ready(function(){
       scroll_start = $(this).scrollTop();
       if(scroll_start > offset.top) {
           $("#navbar-default").css('background-color', '#fff');
+		  $("#navbar-default a").css('color', '#000');
+		  $("#navbar-default li:nth-child(3) a").css('background-position', '0 -69px');
        } else {
           $('#navbar-default').css('background-color', 'transparent');
+		  $("#navbar-default a").css('color', '#fff');
+		  $("#navbar-default li:nth-child(3) a").css('background-position', '0 0');
+
        }
    });
     }
