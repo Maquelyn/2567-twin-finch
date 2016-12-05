@@ -38,10 +38,6 @@ html {
 	box-sizing: border-box;
 }
 
-* {
-	color: #2f2f30;
-}
-
 .wrapper {
 	width: 75%;
 	margin: 0 auto;
@@ -67,19 +63,7 @@ blockquote p:first-child, h2, h3 {
 
 /** 1.1 - Headings **/
 
-blockquote p, #navbar-default a {
-	color: #fff;
-}
 
-blockquote p:first-child {
-	font-size: 3.3rem;
-	margin-bottom: 20px;
-}
-
-blockquote p:last-child {
-	font-size: 1.18rem;
-	margin-bottom: 60px;
-}
 
 h2 {
 	font-size: 3.1rem;
@@ -95,8 +79,38 @@ h3, h4 {
 
 /** 1.2 - Body Copy **/
 
+blockquote p, #navbar-default a {
+	color: #fff;
+}
+
+blockquote p:first-child {
+	font-size: 3.3rem;
+	margin-bottom: 20px;
+}
+
+blockquote p:last-child {
+	font-size: 1.18rem;
+	margin-bottom: 100px;
+}
+
 p {
 	font-size: 1rem;
+}
+
+#products ul+p, #callout, #callout a {
+	font-weight: 700;
+}
+
+#callout, #callout a {
+	color: #59c4be;
+}
+
+#callout a {
+	text-transform: lowercase;
+}
+
+#callout a:hover {
+	color: #2f2f30;
 }
 
 #intro-p {
@@ -176,7 +190,6 @@ ul li {
 
 #subscribe input {
 	padding: 11px 20px;
-	text-align: left;
 	width: 45%;
 }
 
@@ -192,7 +205,7 @@ ul li {
 	margin-top: 30px;
 }
 
-input, textarea {
+label, input, textarea, form p:first-child {
 	display: block;
 	width: 100%;
 }
@@ -207,7 +220,6 @@ input, textarea {
 .product-specs {
 	margin-top: 0;
 	padding-left: 0;
-	text-align: left;
 }
 
 .product-specs li {
@@ -220,27 +232,27 @@ input, textarea {
 
 }
 
-#evening+div .product-specs li:nth-child(2) {
+#products .col-1-2:first-child li:nth-child(2) {
 	padding: 0 40px;
 	margin: 0 40px;
 }
 
-#house+div .product-specs li:nth-child(2) {
+#products .col-1-2:last-child li:nth-child(2) {
 	padding: 0 25px;
 	margin: 0 25px;
 }
 
-#sunrise+div .product-specs li:nth-child(2) {
+#products .col-1-3:first-child li:nth-child(2) {
 	padding: 0 19px;
 	margin: 0 19px;
 }
 
-#midnight+div .product-specs li:nth-child(2) {
+#products .col-1-3:nth-child(2) li:nth-child(2) {
 	padding: 0 28px;
 	margin: 0 28px;
 }
 
-#espresso+div .product-specs li:last-child {
+#products .col-1-3:last-child li:last-child {
 	border-right: none;
 	padding-left: 17px;
 	margin-left: 17px;
@@ -296,7 +308,7 @@ footer nav a {
 /** 3.1 - Site Structure **/
 
 [class*='col-'] {
-	margin: 0 auto;
+	float: left;
 	padding-right: 20px;
 }
 
@@ -308,36 +320,19 @@ section {
 	padding: 15px 0 60px;
 }
 
-
-
-
-/** IMAGE PLACEHOLDERS **/
+#products section {
+	padding: 20px 20px 20px 0;
+}
 
 .bg-lgt-blue {
-	padding: 20px;
+	padding: 20px 20px 50px;
 	height: 100%;
 	background-color: #e8f5f4;
-	width: 100%;
 }
 
-#products .col-1-2 .gray {
-	height: 300px;
+#products section:last-child {
+	padding-right: 0;
 }
-
-#products .col-1-3 .gray {
-	height: 200px;
-}
-
-#map {
-	height: 400px;
-}
-
-#subscribe, #hero, footer {
-	background-color: #9dd8d7;
-	width: 100%;
-}
-
-
 
 /** 3.2 - Site Header **/
 
@@ -345,6 +340,10 @@ section {
 	background-image: url(../img/hero.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-webkit-background-size: cover;
 	background-size: cover;
 	padding: 150px 0 100px;
 }
@@ -356,6 +355,10 @@ footer img {
 }
 
 /** 4.0 - Media **/
+
+#map {
+	height: 400px;
+}
 
 #social-media a {
 	height: 30.5px;
@@ -385,31 +388,28 @@ footer img {
 	background-position: 0 -30.5px;
 }
 
-
-
-/**footer {
-	background-color: #59c4be;
-} **/
-
-/**.d-gray {
-	height: 100px;
-}**/
-
 /** 5.0 - UTILITIES **/
 
 /** 5.1 - Text Alignments **/
 
-h3, h4, #products p, #shipping p {
+h3, h4, #products p, .product-specs, #shipping p, label, input, textarea, form p:first-child {
 	text-align: left;
+}
+
+/** 5.2 - Colors **/
+
+#subscribe, #hero, footer {
+	background-color: #9dd8d7;
 }
 
 /** 5.3 - Alignments **/
 
-.f-left {
-	float: left;
+.block-center {
+	float: none;
+	margin: 0 auto;
 }
 
-.f-right {
+footer .col-1-4 {
 	float: right;
 }
 
@@ -424,120 +424,20 @@ h3, h4, #products p, #shipping p {
 	width: 33.33%;
 }
 
-.col-2-3 {
-	width: 66.66%;
-}
-
 .col-1-4 {
 	width: 25%;
-}
-
-.col-3-4 {
-	width: 75%;
-}
-
-.col-1-5 {
-	width: 20%;
-}
-
-.col-2-5 {
-	width: 40%;
-}
-
-.col-3-5 {
-	width: 60%;
-}
-
-.col-1-6  {
-	width: 16.66%;
-}
-
-.col-5-6 {
-	width: 83.3%;
-}
-
-.col-1-7 {
-	width: 14.28%;
-}
-
-.col-3-7 {
-	width: 42.84%;
-}
-
-.col-4-7 {
-	width: 57.12%;
-}
-
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-3-8 {
-	width: 37.5%;
-}
-
-.col-5-8 {
-	width: 62.5%;
-}
-
-.col-1-9 {
-	width: 11.11%;
-}
-
-.col-2-9 {
-	width: 22.22%;
-}
-
-.col-7-9 {
-	width: 77.77%;
-}
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-3-10 {
-	width: 30%;
-}
-
-.col-7-10 {
-	width: 70%;
-}
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-5-11 {
-	width: 45.45%;
-}
-
-.col-6-11 {
-	width: 54.54%;
-}
-
-.col-1-12 {
-	width: 8.33%;
 }
 
 .col-2-12 {
 	width: 16.66%;
 }
 
-.col-3-12 {
-	width: 24.99%;
-}
-
-.col-10-12 {
-	width: 83.3%;
-}
 
 @media screen and (min-width: 1024px) {
 	
 	/** 2.1 - Main Nav **/
 	#navbar-default {
 		background-color:transparent;
-		color: #FFF;
 	}
 
 	#navbar-default  {
