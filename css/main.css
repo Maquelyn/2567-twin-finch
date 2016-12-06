@@ -129,10 +129,6 @@ a {
 	text-transform: uppercase;
 }
 
-footer a:hover {
-	color: #fff;
-}
-
 ul li {
 	display: inline-block;
 }
@@ -165,12 +161,12 @@ ul li {
 	margin-top: 30px;
 }
 
-.buy a, #subscribe form p a {
+.buy a, form p a {
 	border: 1px solid #2f2f30;
 	padding: 5px 60px;
 }
 
-.buy a:hover, #subscribe form p a:hover {
+.buy a:hover, form p a:hover {
 	background-color: #2f2f30;
 	color: #f0f8f7;
 }
@@ -193,6 +189,7 @@ ul li {
 }
 
 #subscribe input {
+	margin-top: 30px;
 	padding: 11px 20px;
 	width: 45%;
 }
@@ -201,12 +198,22 @@ ul li {
 	margin-top: 42.5px;
 }
 
-#subscribe form p a {
+form p a {
 	padding: 12px 40px;
 }
 
-#subscribe input {
-	margin-top: 30px;
+#contact input, #contact textarea {
+	margin: 5px 0 20px;
+	padding: 10px;
+}
+
+#contact textarea {
+	height: 220px;
+	margin-top: 0;
+}
+
+#contact label:first-child {
+	margin-top: 26px;
 }
 
 label, input, textarea, form p:first-child {
@@ -306,6 +313,8 @@ header ul {
 
 /** 2.3 - Footer Nav **/
 
+
+
 footer nav {
 	margin-left: 170px;
 	padding-top: 18px;
@@ -316,7 +325,12 @@ footer nav li {
 }
 
 footer nav a {
+	color: #fff;
 	font-size: .8rem;
+}
+
+footer nav a:hover {
+	color: #2f2f30;
 }
 
 
@@ -499,6 +513,10 @@ footer .col-1-4 {
 	[class*='col-'] {
 		width: 100%;
 		margin-right: 0;
+	}
+	
+	#products section.col-1-3 {
+		padding-right: 0;
 	}
 	
 	/** 1.1 - Headings **/
