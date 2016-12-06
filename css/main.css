@@ -129,6 +129,10 @@ a {
 	text-transform: uppercase;
 }
 
+footer a:hover {
+	color: #fff;
+}
+
 ul li {
 	display: inline-block;
 }
@@ -267,6 +271,25 @@ h1 {
 	display: none;
 }
 
+header ul {
+	padding: 20px 0 5px;
+}
+
+#hero nav li {
+	vertical-align: middle;
+}
+
+#hero nav a {
+	margin: 5px 10px;
+	padding: 5px 10px;
+}
+
+#hero nav a:hover {
+	border: 2px solid #59c4be;
+	color: #59c4be;
+	padding: 5px 8.5px;
+}
+
 #navbar-default li:nth-child(3) a {
 	height: 69px;
 	width: 100px;
@@ -276,21 +299,15 @@ h1 {
 	background-position: 0 0;
 }
 
-
-header ul {
-	padding: 20px 0 5px;
+#navbar-default li:nth-child(3) a:hover {
+	border: none;
 }
-
-#hero nav li {
-	padding: 0 20px;
-	vertical-align: middle;
-}
-
 
 
 /** 2.3 - Footer Nav **/
 
 footer nav {
+	margin-left: 170px;
 	padding-top: 18px;
 }
 
@@ -334,6 +351,10 @@ section {
 	padding-right: 0;
 }
 
+#map, #shipping {
+	padding: 30px 0;
+}
+
 /** 3.2 - Site Header **/
 
 #hero {
@@ -363,6 +384,7 @@ footer img {
 #social-media a {
 	height: 30.5px;
 	width: 30px;
+	margin-top: 15px;
 	padding: 12px 20px;
 	display: inline-block;
 	background-position: 0 0;
