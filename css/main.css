@@ -27,8 +27,6 @@
 --------------------------------------------------------------*/
 
 
-/** I AM SO SORRY THAT YOU HAVE TO LOOK AT MY SHITTY ASS CODE!!! **/
-
 html {
 	font-size: 16px;
 }
@@ -55,13 +53,36 @@ html {
 /** 1.0 - Typography **/
 
 * {
-	color: #2f2f30;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
 
 blockquote p:first-child, h2, h3 {
 	font-family: 'IM Fell English', serif;
+}
+
+*, #callout a:hover, footer nav a:hover {
+	color: #2f2f30;
+}
+
+blockquote p, footer nav a, #navbar-default a {
+	color: #fff;
+}
+
+#callout, #callout a, #hero a:hover, #hero nav a:hover {
+	color: #59c4be;
+}
+
+#hero a, .buy a:hover, form p a:hover {
+	color: #f0f8f7;
+}
+
+p, a {
+	font-size: 1rem;
+}
+
+#htb-link, #htb-link a, footer nav a {
+	font-size: .8rem;
 }
 
 /** 1.1 - Headings **/
@@ -82,10 +103,6 @@ h3, h4 {
 
 /** 1.2 - Body Copy **/
 
-blockquote p, #navbar-default a {
-	color: #fff;
-}
-
 blockquote p:first-child {
 	font-size: 3.3rem;
 	margin-bottom: 20px;
@@ -96,48 +113,30 @@ blockquote p:last-child {
 	margin-bottom: 100px;
 }
 
-p {
-	font-size: 1rem;
-}
-
 #products ul+p, #callout, #callout a {
 	font-weight: 700;
 }
 
-#callout, #callout a {
-	color: #59c4be;
-}
 
 #callout a {
 	text-transform: lowercase;
-}
-
-#callout a:hover {
-	color: #2f2f30;
 }
 
 #intro-p {
 	font-size: 1.15rem;
 }
 
-#htb-link, #htb-link a {
-	font-size: .8rem;
-}
+
 
 /** 1.3 - Buttons **/
 
 a {
-	font-size: 1rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
 ul li {
 	display: inline-block;
-}
-
-#hero a {
-	color: #f0f8f7;
 }
 
 #hero .btn a {
@@ -148,7 +147,6 @@ ul li {
 
 #hero a:hover {
 	border-color: #59c4be;
-	color: #59c4be;
 }
 
 #hero .btn a:last-child {
@@ -171,7 +169,6 @@ ul li {
 
 .buy a:hover, form p a:hover {
 	background-color: #2f2f30;
-	color: #f0f8f7;
 }
 
 
@@ -228,7 +225,7 @@ form p a {
 }
 
 #contact form p:last-child {
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 label, input, textarea, form p:first-child {
@@ -308,7 +305,6 @@ header ul {
 
 #hero nav a:hover {
 	border: 2px solid #59c4be;
-	color: #59c4be;
 	padding: 5px 8.5px;
 }
 
@@ -339,14 +335,6 @@ footer nav li {
 	padding: 0 10px;
 }
 
-footer nav a {
-	color: #fff;
-	font-size: .8rem;
-}
-
-footer nav a:hover {
-	color: #2f2f30;
-}
 
 
 /** 3.0 - Content **/
@@ -460,7 +448,7 @@ h3, h4, #products p, .product-specs, #shipping p, label, input, textarea, form p
 	margin: 0 auto;
 }
 
-footer .col-1-4 {
+footer .col-1-4, form p a {
 	float: right;
 }
 
@@ -487,11 +475,9 @@ footer .col-1-4 {
 @media screen and (min-width: 1024px) {
 	
 	/** 2.1 - Main Nav **/
-	#navbar-default {
-		background-color:transparent;
-	}
 
 	#navbar-default  {
+		background-color:transparent;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -518,7 +504,7 @@ footer .col-1-4 {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
 	
 	html {
 		font-size: 15px;
@@ -611,11 +597,15 @@ footer .col-1-4 {
 	/** 1.4 - Forms **/
 	
 	#subscribe {
-		padding-bottom: 30px;
+		padding-bottom: 10px;
+	}
+	
+	#subscribe h4 {
+		margin-top: 15px;
 	}
 	
 	#subscribe input  {
-		margin-top: 10px;
+		margin-top: 18.5px;
 		padding: 8px;
 		width: 65%;
 	}
