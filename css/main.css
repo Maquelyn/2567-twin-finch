@@ -26,7 +26,6 @@
 	5.3 - Alignments
 --------------------------------------------------------------*/
 
-
 html {
 	font-size: 16px;
 }
@@ -40,8 +39,8 @@ html {
 }
 
 .wrapper {
-	width: 75%;
 	margin: 0 auto;
+	width: 75%;
 }
 
 .row:after {
@@ -87,8 +86,6 @@ p, a {
 
 /** 1.1 - Headings **/
 
-
-
 h2 {
 	font-size: 3.1rem;
 }
@@ -99,6 +96,10 @@ h3, h4 {
 
 #about h2, #process h2, #contact h2 {
 	margin-bottom: 0;
+}
+
+#products h3 {
+	margin: 0 0 10px;
 }
 
 /** 1.2 - Body Copy **/
@@ -126,17 +127,11 @@ blockquote p:last-child {
 	font-size: 1.15rem;
 }
 
-
-
 /** 1.3 - Buttons **/
 
 a {
 	text-decoration: none;
 	text-transform: uppercase;
-}
-
-ul li {
-	display: inline-block;
 }
 
 #hero .btn a {
@@ -159,7 +154,7 @@ ul li {
 }
 
 .buy {
-	margin-top: 30px;
+	margin: 30px 0 0;
 }
 
 .buy a, form p a {
@@ -171,7 +166,6 @@ ul li {
 	background-color: #2f2f30;
 }
 
-
 /** 1.4 - Forms **/
 
 #subscribe label {
@@ -179,7 +173,6 @@ ul li {
 }
 
 #subscribe h4, #subscribe input, #subscribe p {
-	display: inline-block;
 	float: left;
 }
 
@@ -195,7 +188,7 @@ ul li {
 }
 
 #subscribe form p {
-	margin-top: 42.5px;
+	margin-top: 30px;
 }
 
 form p a {
@@ -215,7 +208,6 @@ form p a {
 	margin: 27px 0 0;
 }
 
-
 #contact label:first-child {
 	margin-top: 26px;
 }
@@ -233,12 +225,7 @@ label, input, textarea, form p:first-child {
 	width: 100%;
 }
 
-
-
-
 /** 1.5 - Lists **/
-
-
 
 .product-specs {
 	margin-top: 0;
@@ -252,38 +239,35 @@ label, input, textarea, form p:first-child {
 .product-specs li:nth-child(2) {
 	border-left: 1px solid #000;
 	border-right: 1px solid #000;
-
 }
 
 #products .col-1-2:first-child li:nth-child(2) {
-	padding: 0 40px;
 	margin: 0 40px;
+	padding: 0 40px;
 }
 
 #products .col-1-2:last-child li:nth-child(2) {
-	padding: 0 25px;
 	margin: 0 25px;
+	padding: 0 25px;
 }
 
 #products .col-1-3:first-child li:nth-child(2) {
-	padding: 0 19px;
 	margin: 0 19px;
+	padding: 0 19px;
 }
 
 #products .col-1-3:nth-child(2) li:nth-child(2) {
-	padding: 0 28px;
 	margin: 0 28px;
+	padding: 0 28px;
 }
 
 #products .col-1-3:last-child li:last-child {
 	border-right: none;
-	padding-left: 17px;
 	margin-left: 17px;
+	padding-left: 17px;
 }
 
-
 /** 2.0 - Navigation Menus **/
-
 /** 2.1 - Main **/
 
 h1 {
@@ -309,22 +293,18 @@ header ul {
 }
 
 #navbar-default li:nth-child(3) a {
-	height: 69px;
-	width: 100px;
 	background: url(../img/logo-h.png) no-repeat;
-	padding: 12px 20px;
-	display: inline-block;
 	background-position: 0 0;
+	height: 69px;
+	padding: 12px 20px;
+	width: 100px;
 }
 
 #navbar-default li:nth-child(3) a:hover {
 	border: none;
 }
 
-
 /** 2.3 - Footer Nav **/
-
-
 
 footer nav {
 	margin-left: 170px;
@@ -335,10 +315,7 @@ footer nav li {
 	padding: 0 10px;
 }
 
-
-
 /** 3.0 - Content **/
-
 /** 3.1 - Site Structure **/
 
 [class*='col-'] {
@@ -359,9 +336,9 @@ section {
 }
 
 .bg-lgt-blue {
-	padding: 20px 20px 50px;
-	height: 100%;
 	background-color: #e8f5f4;
+	height: 100%;
+	padding: 20px;
 }
 
 #products section:last-child {
@@ -370,6 +347,10 @@ section {
 
 #map, #shipping {
 	padding: 30px 0;
+}
+
+ul li, #subscribe h4, #subscribe input, #subscribe p, #navbar-default li:nth-child(3) a, #social-media a, #social-media li {
+	display: inline-block;
 }
 
 /** 3.2 - Site Header **/
@@ -399,16 +380,11 @@ footer img {
 }
 
 #social-media a {
+	background-position: 0 0;
 	height: 30.5px;
-	width: 30px;
 	margin-top: 15px;
 	padding: 12px 20px;
-	display: inline-block;
-	background-position: 0 0;
-}
-
-#social-media li {
-	display: inline-block;
+	width: 30px;
 }
 
 #social-media li:first-child a { 
@@ -428,7 +404,6 @@ footer img {
 }
 
 /** 5.0 - UTILITIES **/
-
 /** 5.1 - Text Alignments **/
 
 h3, h4, #products p, .product-specs, #shipping p, label, input, textarea, form p:first-child {
@@ -454,7 +429,6 @@ footer .col-1-4, form p a {
 
 /** COLUMN WIDTHS **/
 
-
 .col-1-2 {
 	width: 50%;
 }
@@ -471,11 +445,9 @@ footer .col-1-4, form p a {
 	width: 16.66%;
 }
 
-
 @media screen and (min-width: 1024px) {
 	
 	/** 2.1 - Main Nav **/
-
 	#navbar-default  {
 		background-color:transparent;
 		position: fixed;
@@ -500,7 +472,6 @@ footer .col-1-4, form p a {
 	.flex[class*='col-'] {
 		flex: 1;
 	}
-
 
 }
 
@@ -550,16 +521,15 @@ footer .col-1-4, form p a {
 	}
 	
 	/** 1.2 - Body **/
+	a {
+		font-size: .9rem;
+	}
 	
-	p {
+	p, #callout a {
 		font-size: 1rem;
 	}
 	
 	/** 1.3 - Buttons **/
-	
-	a {
-		font-size: .9rem;
-	}
 	
 	#hero .btn a {
 		margin: 10px;
@@ -578,7 +548,8 @@ footer .col-1-4, form p a {
 		display: block;
 		position: absolute;
 		top: 5px;
-		left: 33%;
+		left: 0;
+		right: 0;
 	}
 	
 	#hero nav li a {
@@ -614,49 +585,47 @@ footer .col-1-4, form p a {
 		margin-top: 18.5px;
 	}
 	#subscribe form p a {
-		padding: 9.5px 15px;
+		padding: 9.5px 39px;
 	}
 	
 	/** 1.5 - Lists **/
 	
 	.product-specs li:nth-child(2) {
 		border-left: 1px solid #000;
-		border-right: none;
+		border-right: 1px solid #000;
 	}
 	
 	#products .col-1-2:first-child li:nth-child(2) {
-		padding: 0 5px;
-		margin: 0 5px;
-	}
-
-	#products .col-1-2:last-child li:nth-child(2) {
-		border: none;
-		text-align: left;
-		padding: 0;
-		margin: 0;
-	}
-
-	#products .col-1-3:first-child li:nth-child(2) {
-		border-right: 1px solid #000;
-		padding: 0 9px;
-		margin: 0 9px;
-	}
-
-	#products .col-1-3:nth-child(2) li:nth-child(2) {
-		border-right: 1px solid #000;
 		padding: 0 15px;
 		margin: 0 15px;
 	}
-	
-	#products .col-1-3:last-child li:nth-child(2) {
-		border: none;
-		display: block;
-		padding: 0;
-		margin: 0;
-		text-align: left;
+
+	#products .col-1-2:last-child li:nth-child(2) {
+		border-right: none;
+		/**text-align: left;**/
+		padding: 0 21px;
+		margin: 0 20px;
+	}
+
+	#products .col-1-3:first-child li:nth-child(2) {
+		/**border-right: 1px solid #000;**/
+		padding: 0 34px;
+		margin: 0 34px;
+	}
+
+	#products .col-1-3:nth-child(2) li:nth-child(2) {
+		/**border-right: 1px solid #000;**/
+		padding: 0 45px;
+		margin: 0 45px;
 	}
 	
-		
+	#products .col-1-3:last-child li:nth-child(2) {
+		/**border: none;
+		display: block;**/
+		padding: 0 31px;
+		margin: 0 31px;
+		/**text-align: left;**/
+	}
 	
 	/** 3.1 Site Structure **/
 	
@@ -665,6 +634,10 @@ footer .col-1-4, form p a {
 	}
 	
 	/** 3.3 - Site Footer **/
+	
+	.col-2-12 {
+		padding-right: 0;
+	}
 	
 	footer nav.col-1-3, footer ul {
 		margin: 0;
@@ -675,13 +648,10 @@ footer .col-1-4, form p a {
 		padding: 10px;
 	}
 	
-	
 	/** 4.0 - Media **/
 	
 	#products img {
 		height: 100%;
 		width: 100%;
 	}
-	
 }
-
