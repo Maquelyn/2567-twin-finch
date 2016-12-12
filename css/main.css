@@ -51,13 +51,16 @@ html {
 
 /** 1.0 - Typography **/
 
-* {
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-}
-
 blockquote p:first-child, h2, h3 {
 	font-family: 'IM Fell English', serif;
+}
+
+*, #subscribe h2 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	text-align: center;
 }
 
 *, #callout a:hover, footer nav a:hover {
@@ -80,7 +83,7 @@ p, a {
 	font-size: 1rem;
 }
 
-#htb-link, #htb-link a, footer nav a {
+#process p:last-child, #process p:last-child a, footer nav a {
 	font-size: .8rem;
 }
 
@@ -90,7 +93,7 @@ h2 {
 	font-size: 3.1rem;
 }
 
-h3, h4 {
+#subscribe h2, #shipping h2 {
 	font-size: 1.6rem;
 }
 
@@ -148,7 +151,7 @@ a {
 	padding: 8px 30px;
 }
 
-#htb-link a {
+#process p:last-child a {
 	text-transform: capitalize;
 	text-decoration: underline;
 }
@@ -172,18 +175,13 @@ a {
 	display: none;
 }
 
-#subscribe h4, #subscribe input, #subscribe p {
-	float: left;
-}
-
-#subscribe h4 {
+#subscribe h2 {
 	margin-left: 50px;
 	padding-right: 20px;
 }
 
 #subscribe input {
-	margin-top: 30px;
-	padding: 11px 20px;
+	padding: 11px 22px;
 	width: 45%;
 }
 
@@ -193,6 +191,7 @@ a {
 
 form p a {
 	padding: 12px 40px;
+	text-align: right;
 }
 
 #contact input, #contact textarea {
@@ -349,8 +348,12 @@ section {
 	padding: 30px 0;
 }
 
-ul li, #subscribe h4, #subscribe input, #subscribe p, #navbar-default li:nth-child(3) a, #social-media a, #social-media li {
+ul li, #subscribe h2, #subscribe input, #subscribe p, #navbar-default li:nth-child(3) a, #social-media a, #social-media li {
 	display: inline-block;
+}
+
+footer .col-1-4 {
+	float: right;
 }
 
 /** 3.2 - Site Header **/
@@ -382,8 +385,7 @@ footer img {
 #social-media a {
 	background-position: 0 0;
 	height: 30.5px;
-	margin-top: 15px;
-	padding: 12px 20px;
+	margin: 15px 5px;
 	width: 30px;
 }
 
@@ -403,10 +405,17 @@ footer img {
 	background-position: 0 -30.5px;
 }
 
+#products img {
+	border: 1px solid #dddddd;
+	margin-bottom: -5px;
+	width: 100%;
+}
+
+
 /** 5.0 - UTILITIES **/
 /** 5.1 - Text Alignments **/
 
-h3, h4, #products p, .product-specs, #shipping p, label, input, textarea, form p:first-child {
+#shipping h2, #subscribe h2, #subscribe input, #subscribe p, #products p, .product-specs, #shipping p, label, input, textarea, form p:first-child {
 	text-align: left;
 }
 
@@ -423,9 +432,7 @@ h3, h4, #products p, .product-specs, #shipping p, label, input, textarea, form p
 	margin: 0 auto;
 }
 
-footer .col-1-4, form p a {
-	float: right;
-}
+
 
 /** COLUMN WIDTHS **/
 
@@ -514,7 +521,7 @@ footer .col-1-4, form p a {
 		font-size: 1.7rem;
 	}
 	
-	#subscribe h4 {
+	#subscribe h2 {
 		font-size: 1.3rem;
 		margin-left: 0;
 		margin-bottom: 0;
@@ -571,7 +578,7 @@ footer .col-1-4, form p a {
 		padding-bottom: 10px;
 	}
 	
-	#subscribe h4 {
+	#subscribe h2 {
 		margin-top: 15px;
 	}
 	
@@ -633,6 +640,9 @@ footer .col-1-4, form p a {
 		padding: 5px 0 50px;
 	}
 	
+	#shipping h2, #shipping p {
+		text-align: center;
+	}
 	/** 3.3 - Site Footer **/
 	
 	.col-2-12 {
