@@ -28,29 +28,6 @@
 
 /** IM SORRY YOU HAVE TO LOOK AT MY SHITTY ASS CODE **/
 
-html {
-	font-size: 16px;
-}
-
-*, *:after, *:before {
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.wrapper {
-	margin: 0 auto;
-	width: 75%;
-}
-
-.row:after {
-	clear: both;
-	content: "";
-	display: table;
-}
-
 /** 1.0 - Typography **/
 
 blockquote p:first-child, h2, h3 {
@@ -89,6 +66,23 @@ p, a {
 	font-size: .8rem;
 }
 
+#subscribe label, h1 {
+	display: none;
+}
+
+#contact label, #contact form p:first-child, #subscribe h2, a {
+	text-transform: uppercase;
+}
+
+ul li, #subscribe h2, #subscribe input, #subscribe div, #navbar-default li:nth-child(3) a, #social-media a, #social-media li {
+	display: inline-block;
+}
+
+#shipping h2, #subscribe h2, #subscribe input, #subscribe div, #products h3, #products p, .product-specs, #shipping p, label, input, textarea, form p:first-child {
+	text-align: left;
+}
+
+
 /** 1.1 - Headings **/
 
 h2 {
@@ -99,12 +93,18 @@ h2 {
 	font-size: 1.6rem;
 }
 
-#about h2, #process h2, #contact h2 {
-	margin-bottom: 0;
+header+section h2, #process h2, #contact h2 {
+	margin: 0;
 }
 
 #products h3 {
+	font-size: 1.5rem;
 	margin: 0 0 10px;
+}
+
+#subscribe h2 {
+	margin-left: 10px;
+	padding-right: 10px;
 }
 
 /** 1.2 - Body Copy **/
@@ -136,7 +136,6 @@ blockquote p:last-child {
 
 a {
 	text-decoration: none;
-	text-transform: uppercase;
 }
 
 #hero .btn a {
@@ -158,6 +157,10 @@ a {
 	text-decoration: underline;
 }
 
+#process p:last-child a:hover {
+	font-weight: 700;
+}
+
 .buy {
 	margin: 30px 0 0;
 }
@@ -173,31 +176,40 @@ a {
 
 /** 1.4 - Forms **/
 
-#subscribe label {
-	display: none;
-}
-
-#subscribe h2 {
-	margin-left: 50px;
-	padding-right: 20px;
-}
-
 #subscribe input {
 	padding: 11px 22px;
-	width: 45%;
+	
+	margin: 0;
+}
+
+#subscribe form {
+	padding-top: 16px;
 }
 
 #subscribe form p {
-	margin-top: 30px;
+	display: inline;
+	margin-top: 18px;
+}
+
+#subscribe div.col-1-3 {
+	padding-top: 12px;
 }
 
 form p a {
-	padding: 12px 40px;
+	padding: 11px 40px;
+}
+
+form p:last-child {
 	text-align: right;
 }
 
+input, textarea {
+	background-color: #f0f8f7;
+	border: 1px solid #000;
+}
+
 #contact input, #contact textarea {
-	margin: 5px 0 20px;
+	margin: 7px 0 20px;
 	padding: 10px;
 }
 
@@ -213,16 +225,15 @@ form p a {
 	margin-top: 26px;
 }
 
-#contact label, #contact form p:first-child {
-	text-transform: uppercase;
-}
-
 #contact form p:last-child {
 	margin-top: 30px;
 }
 
 label, input, textarea, form p:first-child {
 	display: block;
+}
+
+label, input, textarea, form p:first-child {
 	width: 100%;
 }
 
@@ -242,12 +253,7 @@ label, input, textarea, form p:first-child {
 	border-right: 1px solid #000;
 }
 
-#products .col-1-2:first-child li:nth-child(2) {
-	margin: 0 40px;
-	padding: 0 40px;
-}
-
-#products .col-1-2:last-child li:nth-child(2) {
+#products .col-1-2:first-child li:nth-child(2), #products .col-1-2:last-child li:nth-child(2), #products .col-1-3:nth-child(2) li:nth-child(2) {
 	margin: 0 25px;
 	padding: 0 25px;
 }
@@ -255,11 +261,6 @@ label, input, textarea, form p:first-child {
 #products .col-1-3:first-child li:nth-child(2) {
 	margin: 0 19px;
 	padding: 0 19px;
-}
-
-#products .col-1-3:nth-child(2) li:nth-child(2) {
-	margin: 0 28px;
-	padding: 0 28px;
 }
 
 #products .col-1-3:last-child li:last-child {
@@ -270,10 +271,6 @@ label, input, textarea, form p:first-child {
 
 /** 2.0 - Navigation Menus **/
 /** 2.1 - Main **/
-
-h1 {
-	display: none;
-}
 
 header ul {
 	padding: 20px 0 5px;
@@ -294,8 +291,7 @@ header ul {
 }
 
 #navbar-default li:nth-child(3) a {
-	background: url(../img/logo-h.png) no-repeat;
-	background-position: 0 0;
+	background: url(../img/logo-h.png) 0 0 no-repeat;
 	height: 69px;
 	padding: 12px 20px;
 	width: 100px;
@@ -318,6 +314,29 @@ footer nav li {
 
 /** 3.0 - Content **/
 /** 3.1 - Site Structure **/
+
+html {
+	font-size: 16px;
+}
+
+*, *:after, *:before {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 75%;
+}
+
+.row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
 
 [class*='col-'] {
 	float: left;
@@ -350,20 +369,22 @@ section {
 	padding: 30px 0;
 }
 
-ul li, #subscribe h2, #subscribe input, #subscribe p, #navbar-default li:nth-child(3) a, #social-media a, #social-media li {
-	display: inline-block;
-}
-
 footer .col-1-4 {
 	float: right;
+}
+
+section.bg-lgt-blue {
+	padding: 40px 0;
+}
+
+#subscribe, #hero, footer {
+	background-color: #9dd8d7;
 }
 
 /** 3.2 - Site Header **/
 
 #hero {
-	background-image: url(../img/hero.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
+	background: url(../img/hero.jpg) center no-repeat;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-ms-background-size: cover;
@@ -374,11 +395,11 @@ footer .col-1-4 {
 
 /** 3.3 - Site Footer **/
 
+/** 4.0 - Media **/
+
 footer img {
 	margin: 20px 0;
 }
-
-/** 4.0 - Media **/
 
 #map {
 	height: 400px;
@@ -417,15 +438,7 @@ footer img {
 /** 5.0 - UTILITIES **/
 /** 5.1 - Text Alignments **/
 
-#shipping h2, #subscribe h2, #subscribe input, #subscribe p, #products p, .product-specs, #shipping p, label, input, textarea, form p:first-child {
-	text-align: left;
-}
-
 /** 5.2 - Colors **/
-
-#subscribe, #hero, footer {
-	background-color: #9dd8d7;
-}
 
 /** 5.3 - Alignments **/
 
@@ -446,8 +459,20 @@ footer img {
 	width: 33.33%;
 }
 
+.col-2-3 {
+	width: 66.66%
+}
+
 .col-1-4 {
 	width: 25%;
+}
+
+.col-2-5 {
+	width: 40%;
+}
+
+.col-3-5 {
+	width: 60%;
 }
 
 .col-2-12 {
@@ -490,30 +515,7 @@ footer img {
 		font-size: 15px;
 	}
 	
-	.wrapper {
-		margin: 0 auto;
-		width: 90%;
-	}
-	
-	[class*='col-'] {
-		width: 100%;
-		margin-right: 0;
-	}
-	
-	#products section.col-1-3, #products section.col-1-2, #contact .col-1-2, .col-1-2 {
-		padding-right: 0;
-	}
-	
 	/** 1.1 - Headings **/
-	
-	blockquote p:first-child {
-		font-size: 1.7rem;
-	}
-	
-	blockquote p:last-child {
-		font-size: 1rem;
-		margin-bottom: 50px;
-	}
 	
 	h2 {
 		font-size: 2.2rem;
@@ -525,8 +527,7 @@ footer img {
 	
 	#subscribe h2 {
 		font-size: 1.3rem;
-		margin-left: 0;
-		margin-bottom: 0;
+		margin: 15px 0 0;
 	}
 	
 	/** 1.2 - Body **/
@@ -536,6 +537,15 @@ footer img {
 	
 	p, #callout a {
 		font-size: 1rem;
+	}
+	
+	blockquote p:first-child {
+		font-size: 1.7rem;
+	}
+	
+	blockquote p:last-child {
+		font-size: 1rem;
+		margin-bottom: 50px;
 	}
 	
 	/** 1.3 - Buttons **/
@@ -552,6 +562,57 @@ footer img {
 	header ul {
 		padding: 70px 0 30px;
 	}
+	
+	/** 1.4 - Forms **/
+	
+	#subscribe {
+		padding-bottom: 10px;
+	}
+	
+	#subscribe input  {
+		margin-top: 18.5px;
+		padding: 8px;
+		width: 65%;
+	}
+	
+	#subscribe div a {
+		padding: 9px 35px;
+	}
+	
+	/** 1.5 - Lists **/
+	
+	.product-specs li:nth-child(2) {
+		border-left: 1px solid #000;
+		border-right: 1px solid #000;
+	}
+	
+	#products .col-1-2:first-child li:nth-child(2) {
+		padding: 0 15px;
+		margin: 0 15px;
+	}
+
+	#products .col-1-2:last-child li:nth-child(2) {
+		border-right: none;
+		padding: 0 0 0 21px;
+		margin: 0 0 0 20px;
+	}
+
+	#products .col-1-3:first-child li:nth-child(2) {
+		padding: 0 34px;
+		margin: 0 34px;
+	}
+
+	#products .col-1-3:nth-child(2) li:nth-child(2) {
+		padding: 0 45px;
+		margin: 0 45px;
+	}
+	
+	#products .col-1-3:last-child li:nth-child(2) {
+		padding: 0 31px;
+		margin: 0 31px;
+	}
+	
+	/** 2.1 Main Nav **/
 	
 	header nav li:nth-child(3) {
 		display: block;
@@ -574,68 +635,6 @@ footer img {
 		padding: 0 5px;
 	}
 	
-	/** 1.4 - Forms **/
-	
-	#subscribe {
-		padding-bottom: 10px;
-	}
-	
-	#subscribe h2 {
-		margin-top: 15px;
-	}
-	
-	#subscribe input  {
-		margin-top: 18.5px;
-		padding: 8px;
-		width: 65%;
-	}
-	
-	#subscribe form p {
-		margin-top: 18.5px;
-	}
-	#subscribe form p a {
-		padding: 9.5px 39px;
-	}
-	
-	/** 1.5 - Lists **/
-	
-	.product-specs li:nth-child(2) {
-		border-left: 1px solid #000;
-		border-right: 1px solid #000;
-	}
-	
-	#products .col-1-2:first-child li:nth-child(2) {
-		padding: 0 15px;
-		margin: 0 15px;
-	}
-
-	#products .col-1-2:last-child li:nth-child(2) {
-		border-right: none;
-		/**text-align: left;**/
-		padding: 0 21px;
-		margin: 0 20px;
-	}
-
-	#products .col-1-3:first-child li:nth-child(2) {
-		/**border-right: 1px solid #000;**/
-		padding: 0 34px;
-		margin: 0 34px;
-	}
-
-	#products .col-1-3:nth-child(2) li:nth-child(2) {
-		/**border-right: 1px solid #000;**/
-		padding: 0 45px;
-		margin: 0 45px;
-	}
-	
-	#products .col-1-3:last-child li:nth-child(2) {
-		/**border: none;
-		display: block;**/
-		padding: 0 31px;
-		margin: 0 31px;
-		/**text-align: left;**/
-	}
-	
 	/** 3.1 Site Structure **/
 	
 	#hero{
@@ -645,6 +644,26 @@ footer img {
 	#shipping h2, #shipping p {
 		text-align: center;
 	}
+	
+	#subscribe div.col-1-3 {
+		margin-top: 14.5px;
+		width: 35%;
+	}
+	
+	.wrapper {
+		margin: 0 auto;
+		width: 90%;
+	}
+	
+	[class*='col-'] {
+		width: 100%;
+		margin-right: 0;
+	}
+	
+	#products section.col-1-3, #products section.col-1-2, #contact .col-1-2, .col-1-2 {
+		padding-right: 0;
+	}
+	
 	/** 3.3 - Site Footer **/
 	
 	.col-2-12 {
